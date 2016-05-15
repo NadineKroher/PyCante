@@ -34,6 +34,7 @@ or alternatively clone this directory
 
 Usage
 -----
+    import cante
 
     python transcribe(filename, acc=True, f0_file=False, recursive=False)
 
