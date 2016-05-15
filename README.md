@@ -19,17 +19,28 @@ essentia (http://essentia.upf.edu) python bindings. If you wish to use a differe
 Installation
 ------------
 
+Download the latest distribution from 
 
+    http://tinyurl.com/z4d44ea
+
+unpack and run 
+    
+    python setup.py install
+    
+or alternatively clone this directory
+
+    git clone https://github.com/NadineKroher/PyCante
+    
 
 Usage
 -----
 
-python transcribe(filename, acc=True, f0_file=False, recursive=False)
+    python transcribe(filename, acc=True, f0_file=False, recursive=False)
 
 The algorithm creates a .csv file containing the estimated note events corresponding to the
 singing voice melody, where each row corresponds to a note event as follows:
 
-< note onset [seconds] >, < note duration [seconds] >, < MIDI pitch value >;
+    < note onset [seconds] >, < note duration [seconds] >, < MIDI pitch value >;
 
 Input is a .wav audio file with a sample rate of 44.1kHz and a bit depth of 16 Bits. Otherwise
 an error is raised.
@@ -60,13 +71,11 @@ Citing
 
 Please cite the following publication if you use this code for reasearch purposes:
 
-Kroher, N. & Gomez, E. (2016). Automatic Transcription of Flamenco Singing from Polyphonic Music Recordings.
-ACM / IEEE Transactions on Audio, Speech and Language Processing, 24(5), pp. 901-913.
+    Kroher, N. & Gomez, E. (2016). Automatic Transcription of Flamenco Singing from Polyphonic Music Recordings.
+    ACM / IEEE Transactions on Audio, Speech and Language Processing, 24(5), pp. 901-913.
 
 
 Contact
 -------
 
-For feedback or inquiries, please contact:
-
-nkroher at us dot es
+For feedback or inquiries, please contact: nkroher at us dot es
