@@ -1,0 +1,4 @@
+numpy
+scipy
+essentia (algoF0)
+detect_peaks (3rdParty)

@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: cante
+Version: 1.0
+Summary: Automatic transcription of flamenco singing.
+Home-page: http://www.cofla-project.com
+Author: Nadine Kroher
+Author-email: nkroher@us.es
+License: UNKNOWN
+Description: CANTE: An algorithm for automatic transcription of flamenco singing from polyphonic music recordings.
+Keywords: audio flamenco MIR
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
