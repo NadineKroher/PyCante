@@ -36,7 +36,7 @@ Usage
 -----
     import cante
 
-    python transcribe(filename, acc=True, f0_file=False, recursive=False)
+    python cante.transcribe(filename, acc=True, f0_file=False, recursive=False)
 
 The algorithm creates a .csv file containing the estimated note events corresponding to the
 singing voice melody, where each row corresponds to a note event as follows:
