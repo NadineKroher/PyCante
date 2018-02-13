@@ -9,7 +9,7 @@ def AST(filename, acc=True, f0_file=False):
     description.
     '''
     # display current file
-    print 'transcribing %s ...' % filename
+    print('transcribing %s ...' % filename)
 
     # time tic
     startTime = time.time()
@@ -66,8 +66,8 @@ def AST(filename, acc=True, f0_file=False):
     writeToCsv(notes,filename[0:len(filename)-3]+'notes.csv')
 
     # display success & elapsed time
-    print 'Done!'
-    print'Elapsed time: %f seconds' % (time.time()-startTime)
+    print('Done!')
+    print('Elapsed time: %f seconds' % (time.time()-startTime))
 
     return
 
@@ -113,7 +113,7 @@ def transcribe(filename, acc = True, f0_file = False, recursive = False,):
     if not recursive:
         # sanity check
         if not os.path.isfile(filename):
-            print "ERROR: file not found!"
+            print("ERROR: file not found!")
             return
         # transcription
         AST(filename, acc, f0_file)
@@ -122,7 +122,7 @@ def transcribe(filename, acc = True, f0_file = False, recursive = False,):
     else:
         # sanity check
         if not os.path.isdir(filename):
-            print "ERROR: folder not found!"
+            print("ERROR: folder not found!")
             return
         # get list of all wav files
         files = []

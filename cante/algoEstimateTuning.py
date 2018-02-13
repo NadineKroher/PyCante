@@ -1,5 +1,5 @@
-from utils import convertToCents
-from utils import movingAverageBin
+from .utils import convertToCents
+from .utils import movingAverageBin
 from numpy import cos, sin, angle, array
 from math import pi
 

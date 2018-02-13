@@ -1,4 +1,5 @@
 MANIFEST.in
+README.md
 setup.py
 cante/__init__.py
 cante/algoChannelSelection.py

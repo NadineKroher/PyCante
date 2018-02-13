@@ -36,7 +36,7 @@ def writeToCsv(notes,filename):
     :param filename: csv file to be written
     :return: NONE
     '''
-    with open(filename, "wb") as f:
+    with open(filename, "w") as f:
         writer = csv.writer(f)
         writer.writerows(notes)
 

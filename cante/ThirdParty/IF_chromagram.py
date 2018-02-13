@@ -45,7 +45,7 @@ def IF_chromagram(w,fT):
 
     nhops = 1 + int(float(s-W)/float(H))
     nmw1 = int(float(N-W)/2.0)
-    nmw2 = N-W - nmw1
+    nmw2 = int(N-W - nmw1)
     ww = 2.0 * pi * arange(N)*float(sr)/float(N)
 
     D = []
@@ -58,7 +58,7 @@ def IF_chromagram(w,fT):
     numSkipped = 0
 
     for h in range(0,nhops):
-        u = X[(h-1)*H + arange(1,W+1)]
+        u = X[int((h-1)*H) + arange(1,int(W+1))]
         if sum(u)==0:
             numSkipped = numSkipped + 1
             continue
@@ -68,7 +68,7 @@ def IF_chromagram(w,fT):
         du = hstack((zeros((1,nmw1))[0],du,zeros((1,nmw2))[0]))
         t1 = fft(fftpack.fftshift(du))
         t2 = fft(fftpack.fftshift(wu))
-        t22 = (t2[1:1+N/2])*norm
+        t22 = (t2[1:1+int(N/2)])*norm
         D.append(t22)
         t = array(t1 + (ww*t2)*1j,dtype=complex)
         a = real(t2)
@@ -76,7 +76,7 @@ def IF_chromagram(w,fT):
         da = real(t)
         db = imag(t)
         instf = (1.0/(2.0*pi))*(a*db - b*da)/(a*a + b*b)
-        F.append(instf[1:(1+N/2)])
+        F.append(instf[1:(1+int(N/2))])
 
     nhops = nhops-numSkipped
     D = asarray(D,dtype=complex)

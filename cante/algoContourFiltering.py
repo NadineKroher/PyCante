@@ -1,7 +1,7 @@
-from extrBarkBands import extrBarkBands
+from .extrBarkBands import extrBarkBands
 from numpy import mean, cov, array
 from scipy.stats import multivariate_normal
-from utils import movingAverageBin, findSegments
+from .utils import movingAverageBin, findSegments
 
 def algoContourFiltering(_f0, audioSamples):
 
@@ -21,15 +21,15 @@ def algoContourFiltering(_f0, audioSamples):
     hopSize = 1024
     hopSizePitch = 128
     fs = 44100
-    resFactor = hopSize/hopSizePitch
+    resFactor = int(hopSize/hopSizePitch)
 
     # extract bark bands
     bb = extrBarkBands(audioSamples)
 
     # adjust array length
     aLen = min([len(bb)*resFactor, len(f0)])
-    bb = bb[0:aLen*resFactor]
-    f0 = f0[0:aLen]
+    bb = bb[0:int(aLen*resFactor)]
+    f0 = f0[0:int(aLen)]
 
     # gather bark bands for voiced and unvoiced frames (initial estimation)
     Bu = []

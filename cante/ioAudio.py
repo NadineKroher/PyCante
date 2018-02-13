@@ -25,7 +25,7 @@ def loadWaveAudio(filename):
     # check file format
     if data.dtype != 'int16' or fs != 44100:
         print('ERROR: Wrong input file format!')
-        print 'bit depth = %d, sample rate = %d' %(data.dtype, fs)
+        print('bit depth = %d, sample rate = %d' %(data.dtype, fs))
         print('Required: 16 Bit, 44100 Hz')
 
     # get number of channels

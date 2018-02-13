@@ -2,7 +2,7 @@ from cante.ThirdParty.IF_chromagram import IF_chromagram
 from numpy import array, histogram, log2, argmax, zeros, arange
 from scipy.stats import norm
 
-from utils import convertToCents, movingAverage
+from .utils import convertToCents, movingAverage
 
 
 def algoPitchLabelling(_f0,startC,endC,fT,samples):

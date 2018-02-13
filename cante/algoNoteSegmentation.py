@@ -4,8 +4,8 @@ from cante.ThirdParty.detect_peaks import detect_peaks
 from numpy import log10, multiply, diff, argmax, mean, divide, std
 from scipy.ndimage import gaussian_filter1d
 
-from utils import convertToCents
-from utils import findSegments, movingAverage
+from .utils import convertToCents
+from .utils import findSegments, movingAverage
 
 
 def algoNoteSegmentation(_f0,samples):

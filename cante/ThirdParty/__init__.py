@@ -1,2 +1,2 @@
-from detect_peaks import *
-from IF_chromagram import *
+from .detect_peaks import *
+from .IF_chromagram import *
